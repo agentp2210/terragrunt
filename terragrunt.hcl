@@ -29,6 +29,6 @@ provider "aws" {
 EOF
 }
 
-inputs {
+inputs = {
   region = "us-east-1"
 }
