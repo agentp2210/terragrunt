@@ -1,5 +1,6 @@
 variable "instance_type" {}
 variable "instance_count" {}
+variable "region" {}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
