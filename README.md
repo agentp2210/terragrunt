@@ -1,6 +1,6 @@
 # Terragrunt basic
 
-## Generate backend automatically
+## Generate backend, provider automatically
 
 The terragrunt in the parent folder include the function path_relative_to_include() so it will automatically generate the path
 
@@ -25,9 +25,17 @@ cd ./dev
 terragrunt apply --auto-approve
 ```
 
-4. Check the backend.tf generated in the subfolders
+4. Check the backend.tf and provider.tf generated in the subfolders
 ``` shell
 cat backend.tf
+cat provider.tf
 ```
 
 5. Go to the AWS portal and check the backend path created in the s3 bucket
+
+
+## Use input block
+
+Instead of using .tfvars file and specify it when running Terraform command with -var-file, we can specify the variables in terragrunt.hcl
+
+1. Check the input block in terragrunt.hcl

@@ -1,3 +1,6 @@
+variable "instance_type" {}
+variable "instance_count" {}
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -15,8 +18,9 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
+  count = var.instance_count
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+  instance_type = var.instance_type
 
   tags = {
     Name = "HelloWorld"
