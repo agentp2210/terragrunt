@@ -1,0 +1,17 @@
+# private key
+**/*/id_rsa
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+**/*.tfstate
+**/*.tfstate.*
+**/backend.tf
+
+#tf plan file
+**/*tfplan*
+
+# terraform lock
+**/.terraform.lock.hcl
+

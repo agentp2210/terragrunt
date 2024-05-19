@@ -25,4 +25,9 @@ cd ./dev
 terragrunt apply --auto-approve
 ```
 
-4. Go to the AWS portal and check the backend path created in the s3 bucket
+4. Check the backend.tf generated in the subfolders
+``` shell
+cat backend.tf
+```
+
+5. Go to the AWS portal and check the backend path created in the s3 bucket
