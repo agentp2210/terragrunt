@@ -6,9 +6,9 @@ if [ -z $(aws s3 ls --output text | awk '{print $3}' | grep tfstate-) ]; then
     aws s3 mb s3://tfstate-$(uuidgen | tr A-Z a-z)
 fi
 # Replace the bucket name in terragrunt.hcl
-old_bucket=$(grep tfstate- terragrunt.hcl | tr -d '"' | awk '{print $3}')
+old_bucket=$(grep tfstate- "../terragrunt.hcl" | tr -d '"' | awk '{print $3}')
 new_bucket=$(aws s3 ls --output text | awk '{print $3}' | grep tfstate-)
-sed -i -e "s/$old_bucket/$new_bucket/g" ../terragrunt.hcl
+sed -i -e "s/$old_bucket/$new_bucket/g" "../terragrunt.hcl"
 
 # Create Dynamodb table for locking
 table=$(aws dynamodb list-tables --query "TableNames" --output text)
