@@ -9,7 +9,7 @@ The terragrunt in subfolders will generate the backend thanks to the function fi
 1. Create an S3 bucket and a DynamoDB table
 ``` shell
 aws configure
-./scritps/create-backend.sh
+./scripts/create-backend.sh
 ```
 
 2. Check the terragrunt.hcl in the parent folder and subfolders to see how it links
