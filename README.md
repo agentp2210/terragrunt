@@ -39,3 +39,7 @@ cat provider.tf
 Instead of using .tfvars file and specify it when running Terraform command with -var-file, we can specify the variables in terragrunt.hcl
 
 1. Check the input block in terragrunt.hcl
+``` shell
+grep -A 10 "input" dev/terragrunt.hcl
+grep -A 10 "input" prod/terragrunt.hcl
+```
