@@ -24,7 +24,7 @@ fi
 #Remove old TF Backend if exist
 echo "Removing existing tfstate"
 
-environments=["dev", "prod"]
+environments=("dev", "prod")
 
 for env in $environments; do
     if test -d "../$env/.terraform"; then
