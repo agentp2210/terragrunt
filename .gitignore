@@ -8,6 +8,7 @@
 **/*.tfstate
 **/*.tfstate.*
 **/backend.tf
+**/provider.tf
 
 #tf plan file
 **/*tfplan*
