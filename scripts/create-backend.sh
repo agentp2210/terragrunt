@@ -26,7 +26,7 @@ echo "Removing existing tfstate"
 
 environments=("dev" "prod")
 
-for env in $environments; do
+for env in ${environments[@]}; do
     if test -d "../$env/.terraform"; then
         rm -rf "../$env/.terraform"
     fi
