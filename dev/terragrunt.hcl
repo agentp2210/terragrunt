@@ -5,4 +5,7 @@ include "root" {
 inputs = {
   instance_count = 1
   instance_type  = "t3.micro"
+  tags = {
+    environment = "dev"
+  }
 }
